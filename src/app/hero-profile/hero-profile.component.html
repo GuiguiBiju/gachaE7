@@ -1,0 +1,28 @@
+<div class="titleBG">
+  <h1>Profile of {{hero.name}} + {{hero.imprint}}</h1>
+</div>
+
+<section [ngClass]="hero.element" class="partial">
+  <div  class="pimage">
+    <img class="heroprofile"  [src]="hero.picture" alt="hero-image">
+  </div>
+  <div class="ptext">
+    <h2 class="right">Stats: </h2>
+    <p class="right">Name: {{hero.name}}</p>
+    <p class="right">Role: {{hero.role}}</p>
+    <p class="right">Rarity: {{hero.rarity}}</p>
+    <p class="right">Element: {{hero.element}}</p>
+    <p class="right">Hp: {{hero.hp}}</p>
+    <p class="right">Atk: {{hero.atk}}</p>
+    <p class="right">Def: {{hero.def}}</p>
+    <p class="right">Spd: {{hero.speed}}</p>
+    <div class="ptext">
+      <button class="boutonvalider" [routerLink]="['/heroedit', hero.name]">Edit your hero stats</button>
+    </div>
+  </div>
+</section>
+
+<div class="center">
+  <button class="boutonvalider" [routerLink]="['/myteam']"> Back to Hero List</button>
+</div>
+

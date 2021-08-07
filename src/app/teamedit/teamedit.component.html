@@ -1,0 +1,54 @@
+
+<div class="titleBG">
+  <h1>Compose a Team of 4 Heroes</h1>
+</div>
+
+
+<div> <!--si il reste des invocation-->
+  <p>click on a hero to add to team</p>
+</div>
+
+<section class="horizontal">
+  <div [ngClass]="owned.element" class="contain" *ngFor="let owned of heroOwned">
+
+    <!--si le hero a un imprint-->
+    <div *ngIf="owned.imprint > 0; else elseTemplate" class="main">
+      <p>{{owned.name}} + {{owned.imprint}}</p>
+    </div>
+  <!--sinon on effectue ceci-->
+    <ng-template #elseTemplate>
+      <div class="alternative">
+        <p>{{owned.name}}</p>
+      </div>
+    </ng-template>
+
+    <a (click)="addtoteam(owned)">
+      <img class="herolist"  [src]="owned.picture" alt="hero-image">
+    </a>
+  </div>
+</section>
+
+<section *ngIf="team.front !='' " class="myteam" >
+  <div class="team">
+    <h2>front</h2>
+    <img class="herolist"  [src]="team.front.picture" alt="hero-image">
+  </div>
+  <div class="team">
+    <h2>Top</h2>
+    <img class="herolist"  [src]="team.top.picture" alt="hero-image">
+  </div>
+  <div class="team">
+    <h2>Bot</h2>
+    <img class="herolist"  [src]="team.bot.picture" alt="hero-image">
+  </div>
+  <div class="team">
+    <h2>Rear</h2>
+    <img class="herolist"  [src]="team.rear.picture" alt="hero-image">
+  </div>
+</section>
+
+<section class="horizontal">
+  <div class="center">
+    <Button class="boutonvalider" [routerLink]="['/myteam']">back to hero list</Button>
+  </div>
+</section>

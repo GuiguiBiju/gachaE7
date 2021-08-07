@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  transition: 0.5s;
+}
+body{
+  background-image: url("assets/lobby.jpg");
+  background-size: cover;
+}
+h1{
+  color: white;
+}
+p, span{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+  color: white;
+}
+.titleBG{
+  width: 30%;
+  background-color: rgba(145, 109, 56, 0.7);
+  padding: 20px 0;
+  margin: auto;
+  border-radius: 20px;
+}
+.summonbook{
+  width: 250px;
+}
+.center{
+  display: block;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.horizontal{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.contain{
+  width: 20%;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+img{
+  display: block;
+  margin: auto;
+}
+.herolist{
+  height: 250px;
+  margin: 20px 20px;
+  margin: auto;
+}
+.heroprofile{
+  height: 500px;
+  margin: 20px 20px;
+  margin: auto;
+}
+.boutonvalider:hover, .boutonreroll:hover{
+cursor: pointer;
+}
+.boutonvalider{
+height: 50px;
+margin: 10px 0;
+width: 200px;
+color: rgb(255, 255, 255);
+font-size: 15px;
+background: linear-gradient(rgb(82, 173, 74), 10%, rgb(49, 153, 118));
+border-radius: 15px;
+}
+.boutonreroll{
+height: 50px;
+margin: 10px 0;
+width: 200px;
+color: rgb(255, 255, 255);
+font-size: 15px;
+background: linear-gradient(rgb(226, 66, 18), 10%, rgb(117, 16, 9));
+border-radius: 15px;
+}
+.partial{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  border-radius: 20px;
+  margin: auto;
+}
+.left{
+  text-align: start;
+}
+.right
+{
+  padding-right: 80px;
+  text-align: start;
+}
+.pimage{
+  width: 55%;
+  //border-radius: 20px;
+  box-sizing: border-box;
+}
+.ptext{
+  width: 30%;
+
+}
+
+
+
+//element classes
+.Dark{
+  background-color: rgba(43, 15, 48, 0.7);
+  border: 5px solid rgb(43, 3, 51, 0.85);
+}
+.Light{
+  background-color: rgba(236, 208, 48, 0.7);
+  border: 5px solid rgb(255, 252, 63, 0.85);
+
+}
+.Green{
+  background-color: rgba(24, 245, 17, 0.7);
+  border: 5px solid rgb(16, 190, 1, 0.85);
+
+}
+.Red{
+  background-color: rgba(238, 0, 0, 0.7);
+  border: 5px solid rgb(192, 0, 0, 0.85)
+
+}
+.Blue{
+  background-color: rgba(17, 109, 248, 0.7);
+  border: 5px solid rgb(0, 3, 189, 0.85);
+
+}

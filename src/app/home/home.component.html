@@ -1,0 +1,26 @@
+
+<div class="titleBG">
+  <h1>Welcome to GachaE7 Battle!</h1>
+</div>
+
+
+<div *ngIf="this.summons>0" class="center" > <!--si il reste des invocation-->
+  <p>click to summon up to 10 special heroes</p>
+  <span (click)="summonHero()">
+    <img class="summonbook" src="assets/summon-book-gif.gif" alt="summonBook">
+  </span>
+</div>
+
+<div *ngIf="this.summons<=0" class="center" > <!--si on a plus aucune invocations, possibilité de valider ou reroll-->
+  <button class="boutonvalider" [routerLink]="['/myteam']" >Confirmer</button><br>
+  <button class="boutonreroll" (click)="reroll()">Reroll</button>
+</div>
+
+<section class="horizontal">
+  <div [ngClass]="this.owned.element" class="contain" *ngFor="let owned of heroOwned">
+    <p>{{this.owned.name}}</p>
+    <img class="herolist"  [src]="this.owned.picture" alt="hero-image">
+  </div>
+</section>
+
+

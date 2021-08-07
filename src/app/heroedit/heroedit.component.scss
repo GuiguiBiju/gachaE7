@@ -1,0 +1,25 @@
+.form-group{
+  display: block;
+  width: 100%;
+}
+form{
+  width: 40%;
+}
+input, label{
+  width: 80%;
+  display: block;
+  margin: 0;
+}
+label{
+  color: white;
+  padding: 10px;
+}
+.profileedit{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  border-radius: 20px;
+  margin: auto;
+}
+

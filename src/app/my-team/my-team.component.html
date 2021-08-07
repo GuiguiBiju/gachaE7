@@ -1,0 +1,35 @@
+
+<div class="titleBG">
+  <h1>This is your Hero list</h1>
+</div>
+
+
+<div> <!--si il reste des invocation-->
+  <p>click on a hero to see his stats!</p>
+</div>
+
+<section class="horizontal">
+  <div [ngClass]="owned.element" class="contain" *ngFor="let owned of heroOwned">
+
+    <!--si le hero a un imprint-->
+    <div *ngIf="owned.imprint > 0; else elseTemplate" class="main">
+      <p>{{owned.name}} + {{owned.imprint}}</p>
+   </div>
+   <!--sinon on effectue ceci-->
+   <ng-template #elseTemplate>
+      <div class="alternative">
+        <p>{{owned.name}}</p>
+      </div>
+   </ng-template>
+
+
+    <a [routerLink]="['/heroProfile',owned.name]">
+      <img class="herolist"  [src]="owned.picture" alt="hero-image">
+    </a>
+  </div>
+</section>
+
+<div class="center">
+  <Button class="boutonvalider" [routerLink]="['/teamedit']">Edit your Team Composition</Button>
+</div>
+
